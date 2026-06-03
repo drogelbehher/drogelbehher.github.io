@@ -19,10 +19,6 @@
 
 
 <body>
-    <div id="boot-screen">
-        <div id="boot-console"></div>
-    </div>
-
     <div class="cyber-bg"></div>
 
     <nav class="top-nav animate-fade-in">
@@ -223,54 +219,6 @@
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(type, 500);
         });
-    </script>
-
-    <script>
-        const logs = [
-            "[ INFO ] Starting KS-SOC Core System...",
-            "[ OK ] Initializing network interfaces (OSI/TCP)...",
-            "[ INFO ] Connecting to Wazuh Manager Server...",
-            "[ OK ] Wazuh agents status: ACTIVE [100%]",
-            "[ WARN ] Simulating network traffic analysis...",
-            "[ INFO ] Wireshark: Filtering packet buffers...",
-            "[ ALERT ] ICMP-flood simulation detected!",
-            "[ ACTION ] Applying firewall rules & IPS signatures...",
-            "[ SUCCESS ] Threat mitigated. Status: SECURE.",
-            "[ INFO ] Decrypting profile. Launching interface..."
-        ];
-
-        const consoleElem = document.getElementById("boot-console");
-        let logIndex = 0;
-
-        function printLog() {
-            if (logIndex < logs.length) {
-                const line = document.createElement("div");
-                line.className = "log-line";
-                
-                if (logs[logIndex].includes("[ OK ]") || logs[logIndex].includes("[ SUCCESS ]")) {
-                    line.style.color = "#39ff14"; 
-                } else if (logs[logIndex].includes("[ ALERT ]") || logs[logIndex].includes("[ WARN ]")) {
-                    line.style.color = "#ffaa00"; 
-                }
-
-                line.textContent = logs[logIndex];
-                consoleElem.appendChild(line);
-                
-                consoleElem.scrollTop = consoleElem.scrollHeight;
-                
-                logIndex++;
-                setTimeout(printLog, Math.random() * 60 + 120);
-            } else {
-                setTimeout(() => {
-                    const screen = document.getElementById("boot-screen");
-                    screen.style.opacity = "0";
-                    screen.style.pointerEvents = "none";
-                    setTimeout(() => screen.style.display = "none", 500);
-                }, 400);
-            }
-        }
-
-        window.addEventListener('DOMContentLoaded', printLog);
     </script>
 </body>
 </html>
