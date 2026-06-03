@@ -244,3 +244,73 @@ footer {
     to { opacity: 1; transform: translateY(0); }
     from { opacity: 0; transform: translateY(10px); }
 }
+
+/* --- СТИЛИ ДЛЯ СПИСКА ЗАДАЧ И ИНТЕРЕСОВ --- */
+.interests-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.interests-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+/* Эффект подсвечивания строк при наведении курсора */
+.interests-list li:hover {
+    background: rgba(88, 166, 255, 0.04);
+    border-color: rgba(88, 166, 255, 0.2);
+    transform: translateX(3px);
+}
+
+/* Иконки перед задачами */
+.interests-list li i {
+    color: #39ff14; /* Неоновый зеленый цвет для чекбоксов */
+    margin-top: 4px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* --- СТИЛИ ДЛЯ ПРИМЕЧАНИЯ О ГОТОВНОСТИ К РУТИНЕ --- */
+.soc-note {
+    background: rgba(88, 166, 255, 0.03);
+    border-left: 3px solid var(--accent-blue);
+    padding: 18px 20px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-top: 25px;
+    border-top: 1px solid rgba(88, 166, 255, 0.05);
+    border-right: 1px solid rgba(88, 166, 255, 0.05);
+    border-bottom: 1px solid rgba(88, 166, 255, 0.05);
+}
+
+.soc-note i {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.soc-note p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Тайминг для плавной анимации появления этого блока */
+.delay-1-5 { 
+    animation-delay: 0.15s; 
+}
+
