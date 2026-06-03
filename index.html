@@ -21,16 +21,17 @@
 <body>
     <div class="cyber-bg"></div>
 
-    <!-- Верхняя навигационная панель -->
+        <!-- Верхняя навигационная панель без забивания истории браузера -->
     <nav class="top-nav animate-fade-in">
         <div class="nav-container">
             <ul class="nav-menu">
-                <li><a href="#about"><i class="fas fa-user-shield"></i> Практика</a></li>
-                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Учеба</a></li>
-                <li><a href="#interests"><i class="fas fa-bullseye"></i> Интересы</a></li>
+                <li><a href="javascript:void(0);" data-target="about"><i class="fas fa-user-shield"></i> Практика</a></li>
+                <li><a href="javascript:void(0);" data-target="education"><i class="fas fa-graduation-cap"></i> Учеба</a></li>
+                <li><a href="javascript:void(0);" data-target="interests"><i class="fas fa-bullseye"></i> Интересы</a></li>
             </ul>
         </div>
     </nav>
+
 
     <!-- Отступ, чтобы контент не залезал под фиксированное меню -->
     <div class="nav-spacer"></div>
@@ -99,7 +100,7 @@
                  <div class="timeline-item">
                         <div class="timeline-header">
                             <h3>РТУ МИРЭА, г. Москва</h3>
-                            <span class="date">выпуск 2028</span>
+                            <span class="date">2023 – 2028</span>
                         </div>
                         <p class="subtitle">Институт кибербезопасности и цифровых технологий</p>
                         <p><strong>Специальность:</strong> 10.05.03 Информационная безопасность автоматизированных систем</p>
@@ -187,5 +188,27 @@
             <p>&copy; 2026 Кирилл Степуленок. Powered by GitHub Pages.</p>
         </footer>
     </div>
+
+    <script>
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Получаем ID блока, к которому нужно прокрутить
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Плавно скроллим к элементу
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
+
