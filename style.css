@@ -434,3 +434,30 @@ html {
         height: 105px;
     }
 }
+
+/* --- СТИЛИ ДЛЯ АНИМАЦИИ ПЕЧАТИ ТЕКСТА --- */
+.typing-container {
+    display: inline-block;
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    padding: 3px 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    min-height: 26px; /* Чтобы шапка не дергалась во время появления текста */
+    font-family: monospace; /* Терминальный шрифт */
+}
+
+.cursor {
+    color: var(--cyber-green); /* Мигающий курсор сделаем неоново-зеленым */
+    font-weight: bold;
+    animation: blink 0.8s infinite;
+}
+
+/* Анимация мигания курсора */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

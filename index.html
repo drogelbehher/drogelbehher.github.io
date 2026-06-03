@@ -40,9 +40,11 @@
         <!-- Главный экран с аватаркой -->
         <header class="headercard animate-fade-in">
             <div class="header-main-info">
-                <div class="profile-title">
+               <div class="profile-title">
                     <h1>Кирилл Степуленок</h1>
-                    <div class="badge">SOC-АНАЛИТИК</div>
+                    <div class="typing-container">
+                        <span id="typing-text"></span><span class="cursor">_</span>
+                    </div>
                 </div>
             </div>
             <div class="contacts">
@@ -206,6 +208,25 @@
                     });
                 }
             });
+        });
+    </script>
+
+    <script>
+        const text = "SOC-АНАЛИТИК";
+        const typingText = document.getElementById("typing-text");
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingText.textContent += text.charAt(index);
+                index++;
+                // Случайная задержка между буквами (от 100 до 200 мс) для реалистичности
+                setTimeout(type, Math.random() * 100 + 100);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 500);
         });
     </script>
 </body>
