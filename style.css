@@ -211,19 +211,24 @@ header.headercard {
 }
 
 .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid !important; 
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 12px !important; 
+    width: 100% !important;
 }
 
 .tag {
-    display: inline-block !important;
-    padding: 8px 14px !important;
-    border-radius: 20px !important; 
-    font-size: 0.85rem !important;
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 10px 4px !important; 
+    border-radius: 20px !important;
+    font-size: 0.8rem !important; 
     font-weight: 600 !important;
     letter-spacing: 0.5px !important;
-    margin: 6px 4px !important; 
+    margin: 0 !important; 
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease !important;
     cursor: pointer !important;
     border: 1px solid transparent !important;
