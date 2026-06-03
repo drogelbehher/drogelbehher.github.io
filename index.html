@@ -20,25 +20,49 @@
 
 <body>
     <div class="cyber-bg"></div>
+
+    <!-- Верхняя навигационная панель -->
+    <nav class="top-nav animate-fade-in">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-terminal"></i> KS.SOC
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about"><i class="fas fa-user-shield"></i> Практика</a></li>
+                <li><a href="#interests"><i class="fas fa-bullseye"></i> Интересы</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Учеба</a></li>
+                <li><a href="#skills"><i class="fas fa-tools"></i> Навыки</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Отступ, чтобы контент не залезал под фиксированное меню -->
+    <div class="nav-spacer"></div>
+
     <div class="container">
-        <!-- Главный экран -->
+        <!-- Главный экран с аватаркой -->
         <header class="headercard animate-fade-in">
-            <div class="profile-title">
-                <h1>Кирилл Степуленок</h1>
-                <div class="badge">SOC-АНАЛИТИК L1</div>
+            <div class="header-main-info">
+                <div class="avatar-box">
+                    <img src="avatar.png" alt="Кирилл Степуленок" class="avatar-img" onerror="this.src='https://unsplash.com'">
+                </div>
+                <div class="profile-title">
+                    <h1>Кирилл Степуленок</h1>
+                    <div class="badge">SOC-АНАЛИТИК</div>
+                </div>
             </div>
             <div class="contacts">
                 <span><i class="fas fa-map-marker-alt"></i> г. Москва</span>
                 <span><i class="fas fa-envelope"></i> <a href="mailto:stepylenokk@gmail.com">stepylenokk@gmail.com</a></span>
-                <span><i class="fab fa-telegram-plane"></i> <a href="https://t.me/drogelbehher" target="_blank">@drogelbehher</a></span>
+                <span><i class="fab fa-telegram-plane"></i> <a href="https://t.me" target="_blank">@drogelbehher</a></span>
             </div>
-
         </header>
 
         <main class="grid-layout">
             <!-- Левая колонка: Опыт и Образование -->
             <div class="main-column">
-                <section class="card animate-fade-in delay-1">
+                <!-- ДОБАВИЛИ ID СЮДА -->
+                <section id="about" class="card animate-fade-in delay-1">
                     <h2><i class="fas fa-user-shield"></i> Опыт и практика</h2>
                     
                         <div class="timeline-item">
@@ -76,7 +100,7 @@
                     </div>
                 </section>
 
-                <section class="card animate-fade-in delay-2">
+                <section id="education" class="card animate-fade-in delay-2">
                     <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
                     
                  <div class="timeline-item">
@@ -89,7 +113,7 @@
                         <!-- Аккуратная ссылка на спецификацию программы -->
                         <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-secondary);">
                             <i class="fas fa-external-link-alt" style="font-size: 0.85rem; color: var(--accent-blue); margin-right: 5px;"></i>
-                            <a href="https://buildin.ai" target="_blank" style="color: var(--accent-blue); text-decoration: none; border-bottom: 1px dashed var(--accent-blue); font-weight: 500; transition: color 0.2s;">
+                            <a href="https://buildin.ai/share/efc703b8-227e-4740-b033-46365946afc7?code=FPGPZW" target="_blank" style="color: var(--accent-blue); text-decoration: none; border-bottom: 1px dashed var(--accent-blue); font-weight: 500; transition: color 0.2s;">
                                 Просмотреть спецификацию и модули программы
                             </a>
                         </p>
@@ -112,7 +136,7 @@
 
                 </section>
 
-                <section class="card animate-fade-in delay-1-5">
+                <section id="interests" class="card animate-fade-in delay-1-5">
                     <h2><i class="fas fa-bullseye"></i>Профессиональные интересы</h2>
                     <p style="margin-bottom: 20px; color: var(--accent-blue); font-weight: 500;">
                         Развитие в рамках Центра мониторинга и реагирования на киберугрозы (SOC)
