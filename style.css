@@ -215,14 +215,18 @@ header.headercard {
     gap: 10px;
 }
 
+/* Эффект плавного движения и изменения яркости при наведении на навык */
 .tag {
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border: 1px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
 }
+
+.tag:hover {
+    transform: translateY(-4px); /* Смещаем тег на 4 пикселя вверх */
+    filter: brightness(1.2);     /* Делаем цвет текста и рамки чуть ярче */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Добавляем легкую тень снизу для эффекта объема */
+}
+
 
 /* Группировка навыков по цветам */
 .tag.tech { background: rgba(57, 255, 20, 0.05); color: #7fff7f; border-color: rgba(57, 255, 20, 0.2); }
