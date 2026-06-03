@@ -215,30 +215,49 @@ header.headercard {
     gap: 10px;
 }
 
+/* --- СВЕРХНАДЕЖНЫЙ СТИЛЬ ДЛЯ НАВЫКОВ --- */
 .tag {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 8px; /* Сильно сглаживаем углы */
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border: 1px solid transparent;
-    margin: 4px 2px; /* Добавляем небольшие отступы между тегами */
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    cursor: pointer;
+    display: inline-block !important;
+    padding: 8px 14px !important;
+    border-radius: 20px !important; /* Делаем углы максимально круглыми, как капсулы */
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    margin: 6px 4px !important; /* Разделяем теги друг от друга */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease !important;
+    cursor: pointer !important;
+    border: 1px solid transparent !important;
 }
 
+/* Возвращаем рамки и цветной фон для каждой группы */
+.tag.tech { 
+    background: rgba(57, 255, 20, 0.08) !important; 
+    color: #7fff7f !important; 
+    border: 1px solid rgba(57, 255, 20, 0.3) !important; 
+}
+.tag.sec  { 
+    background: rgba(255, 170, 0, 0.08) !important; 
+    color: #ffaa00 !important; 
+    border: 1px solid rgba(255, 170, 0, 0.3) !important; 
+}
+.tag.net  { 
+    background: rgba(88, 166, 255, 0.08) !important; 
+    color: #58a6ff !important; 
+    border: 1px solid rgba(88, 166, 255, 0.3) !important; 
+}
+.tag.lang { 
+    background: rgba(211, 88, 255, 0.08) !important; 
+    color: #d358ff !important; 
+    border: 1px solid rgba(211, 88, 255, 0.3) !important; 
+}
+
+/* Анимация при наведении */
 .tag:hover {
-    transform: translateY(-4px); 
-    filter: brightness(1.2);     
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+    transform: translateY(-4px) !important; 
+    filter: brightness(1.25) !important;     
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important; 
 }
 
-/* Группировка навыков по цветам */
-.tag.tech { background: rgba(57, 255, 20, 0.05); color: #7fff7f; border-color: rgba(57, 255, 20, 0.2); }
-.tag.sec  { background: rgba(255, 170, 0, 0.05); color: #ffaa00; border-color: rgba(255, 170, 0, 0.2); }
-.tag.net  { background: rgba(88, 166, 255, 0.05); color: var(--accent-blue); border-color: rgba(88, 166, 255, 0.2); }
-.tag.lang { background: rgba(211, 88, 255, 0.05); color: #d358ff; border-color: rgba(211, 88, 255, 0.2); }
 
 footer {
     text-align: center;
