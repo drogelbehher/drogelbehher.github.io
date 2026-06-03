@@ -461,3 +461,15 @@ html {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+@media (max-width: 580px) {
+    .tags-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .tag {
+        padding: 8px 4px !important;
+        font-size: 0.78rem !important; 
+    }
+}
