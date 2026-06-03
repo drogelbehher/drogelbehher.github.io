@@ -347,35 +347,33 @@ html {
     scroll-padding-top: 90px; 
 }
 
-/* --- НОВАЯ СТИЛЬНАЯ ПАРЯЩАЯ НАВИГАЦИЯ --- */
 .top-nav {
     position: fixed;
-    top: 15px; /* Опускаем чуть ниже, чтобы панель "парила" */
-    left: 50%;
-    transform: translateX(-50%); /* Идеально центрируем по экрану */
-    width: auto; /* Ширина строго по размеру кнопок, а не на весь экран */
-    min-width: 320px;
-    background: rgba(22, 27, 34, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color); /* Тонкая аккуратная рамка */
-    border-radius: 30px; /* Круглые края панели-капсулы */
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background: rgba(22, 27, 34, 0.85); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color); 
     z-index: 9999;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Тень для эффекта объема */
 }
 
 .nav-container {
-    padding: 10px 25px; /* Мягкие внутренние отступы */
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 15px 20px; 
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; 
     align-items: center;
 }
+
 
 .nav-menu {
     list-style: none !important;
     display: flex !important;
     flex-direction: row !important;
-    gap: 30px; /* Отступы между пунктами */
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -401,13 +399,11 @@ html {
     font-size: 0.85rem;
 }
 
-/* Красивая подсветка и микро-движение вверх при наведении */
 .nav-menu a:hover {
     color: var(--accent-blue);
     transform: translateY(-1px);
 }
 
-/* Безопасный отступ сверху, чтобы шапка не пряталась под меню */
 .nav-spacer {
     height: 90px;
 }
