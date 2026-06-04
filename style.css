@@ -473,3 +473,28 @@ html {
         font-size: 0.78rem !important; 
     }
 }
+
+/* --- СТИЛИ ДЛЯ БЛОКА SOFT SKILLS --- */
+.soft-tags-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Ровно 2 колонки в ряд */
+    gap: 10px !important;
+    width: 100% !important;
+}
+
+/* Спокойный серый стиль для гибких навыков, чтобы не перебивать хард-скиллы */
+.tag.soft {
+    background: rgba(139, 148, 158, 0.08) !important;
+    color: #8b949e !important;
+    border: 1px solid rgba(139, 148, 158, 0.3) !important;
+    font-size: 0.78rem !important; /* Чуть уменьшенный шрифт, чтобы длинные фразы не переносились */
+    padding: 10px 2px !important;
+}
+
+/* Интерактивная подсветка софт-скиллов при наведении */
+.tag.soft:hover {
+    background: rgba(139, 148, 158, 0.15) !important;
+    color: #ffffff !important;
+    border-color: rgba(139, 148, 158, 0.6) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
