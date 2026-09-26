@@ -3,295 +3,420 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кирилл Степуленок | SOC-Аналитик</title>
+    <title>Кирилл Степуленок — специалист по информационной безопасности</title>
+    <meta name="description" content="Кирилл Степуленок — специалист по информационной безопасности. Мониторинг и реагирование на инциденты, эксплуатация СЗИ, управление доступом. Москва.">
 
     <link rel="icon" type="image/png" href="avatar.png">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Кирилл Степуленок | SOC-Аналитик">
-    <meta property="og:description" content="Резюме и профессиональные навыки в сфере информационной безопасности.">
-    <meta property="og:image" content="avatar.png">
+    <meta property="og:url" content="https://drogelbehher.github.io/">
+    <meta property="og:title" content="Кирилл Степуленок — специалист по ИБ">
+    <meta property="og:description" content="Резюме: мониторинг событий ИБ, реагирование на инциденты, СЗИ и управление доступом. Сейчас — Angara Security.">
+    <meta property="og:image" content="https://drogelbehher.github.io/avatar.png">
+    <meta name="theme-color" content="#0b0f14">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 
-
 <body>
-    <div class="cyber-bg"></div>
-
-    <nav class="top-nav animate-fade-in">
-        <div class="nav-container">
+    <!-- ========== НАВИГАЦИЯ ========== -->
+    <nav class="top-nav" aria-label="Разделы резюме">
+        <div class="nav-inner">
+            <a class="nav-logo" href="#top"><span class="prompt">~/</span>stepulenok</a>
             <ul class="nav-menu">
-                <li><a href="javascript:void(0);" data-target="about"><i class="fas fa-user-shield"></i> Опыт</a></li>
-                <li><a href="javascript:void(0);" data-target="education"><i class="fas fa-graduation-cap"></i> Образование</a></li>
-                <li><a href="javascript:void(0);" data-target="interests"><i class="fas fa-bullseye"></i> Интересы</a></li>
+                <li><a href="#experience">Опыт</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#education">Образование</a></li>
             </ul>
+            <button class="btn btn-ghost nav-pdf" type="button" onclick="window.print()" title="Сохранить резюме в PDF">
+                <i class="fas fa-file-arrow-down"></i><span>PDF</span>
+            </button>
         </div>
     </nav>
 
+    <div class="container" id="top">
 
-    <div class="nav-spacer"></div>
+        <!-- ========== ШАПКА ========== -->
+        <header class="hero card">
+            <div class="hero-main">
+                <h1>Кирилл Степуленок</h1>
+                <p class="hero-role">Специалист по информационной безопасности</p>
 
-    <div class="container">
-        <header class="headercard animate-fade-in">
-            <div class="header-main-info">
-               <div class="profile-title">
-                    <h1>Кирилл Степуленок</h1>
-                    <div class="typing-container">
-                        <span id="typing-text"></span><span class="cursor">_</span>
+                <div class="terminal" aria-label="Краткая сводка">
+                    <div class="terminal-bar"><span></span><span></span><span></span></div>
+                    <div class="terminal-body">
+                        <p><span class="t-prompt">$</span> whoami</p>
+                        <p class="t-out">Младший инженер ИБ · Angara Security</p>
+                        <p><span class="t-prompt">$</span> cat focus.txt</p>
+                        <p class="t-out t-accent"><span id="typing-text">мониторинг событий ИБ</span><span class="cursor" aria-hidden="true">▍</span></p>
                     </div>
                 </div>
             </div>
-            <div class="contacts">
-                <span><i class="fas fa-map-marker-alt"></i> г. Москва</span>
-                <span><i class="fas fa-envelope"></i> <a href="mailto:stepylenokk@gmail.com">stepylenokk@gmail.com</a></span>
-                <span><i class="fab fa-telegram-plane"></i> <a href="https://t.me/drogelbehher" target="_blank">@drogelbehher</a></span>
+
+            <div class="hero-side">
+                <ul class="contacts">
+                    <li><i class="fas fa-location-dot"></i> Москва</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:stepylenokk@gmail.com">stepylenokk@gmail.com</a></li>
+                    <li><i class="fab fa-telegram"></i> <a href="https://t.me/drogelbehher" target="_blank" rel="noopener">@drogelbehher</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/drogelbehher" target="_blank" rel="noopener">github.com/drogelbehher</a></li>
+                </ul>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://t.me/drogelbehher" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Написать</a>
+                    <button class="btn btn-ghost" type="button" onclick="window.print()"><i class="fas fa-file-arrow-down"></i> Резюме в PDF</button>
+                </div>
             </div>
         </header>
 
-        <main class="grid-layout">
-            <div class="main-column">
-                <section id="about" class="card animate-fade-in delay-1">
-                    <h2><i class="fas fa-user-shield"></i> Опыт</h2>
+        <!-- ========== ЦИФРЫ ========== -->
+        <section class="stats" aria-label="Коротко">
+            <div class="stat"><span class="stat-value">с 2025</span><span class="stat-label">в информационной безопасности</span></div>
+            <div class="stat"><span class="stat-value">Angara</span><span class="stat-label">текущее место работы</span></div>
+            <div class="stat"><span class="stat-value">4 курс</span><span class="stat-label">РТУ МИРЭА, ИБАС</span></div>
+            <div class="stat"><span class="stat-value">B2</span><span class="stat-label">английский язык</span></div>
+        </section>
 
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>ФГБОУ ВО МИРЭА</h3>
-                            <span class="date">09.2025 - 06.2026</span>
-                        </div>
-                        <p class="subtitle">Инженер-лаборант</p>
-                        <p>Обеспечивал комплексную техническую поддержку учебной лаборатории и вел академическую деятельность. Основные направления работы и ключевые обязанности:</p>
-                        <ul class="experience-bullets" style="margin-top: 10px; padding-left: 15px; font-size: 0.95rem; color: var(--text-secondary); list-style-type: '— '; max-width: 100%;">
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Обеспечивал бесперебойную работу ИТ-инфраструктуры лабораторного комплекса кафедры.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Занимался развертыванием, администрированием и поддержкой парка ПК под управлением ОС Linux и Windows.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Участвовал в администрировании Active Directory (управление учетными записями, правами доступа и групповыми политиками).</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Разворачивал и конфигурировал виртуальные машины для создания изолированных тестовых сред.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Поддерживал стабильность локальной сети и устранял сбои оборудования.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Совмещал технические задачи с академической деятельностью: проводил лабораторные практикумы по сетям, системному администрированию и операционным системам.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Консультировал студентов по вопросам отладки ПО, работы с гипервизорами и инфраструктурой стендов.</li>
-                        </ul>
+        <div class="layout">
+            <main class="col-main">
 
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>ООО “Информзащита”</h3>
-                            <span class="date">02.2025 - 06.2025</span>
-                        </div>
-                        <p class="subtitle">Практикант / Стажер по информационной безопасности (SOC)</p>
-                        <p>Прошел отбор и завершил программу «Основы проектной деятельности в информационной безопасности». На практике занимался различными задачами:</p>
-                        <ul class="experience-bullets" style="margin-top: 10px; padding-left: 15px; font-size: 0.95rem; color: var(--text-secondary); list-style-type: '— '; max-width: 100%;">
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Прохождение интенсивной практической подготовки по направлению мониторинга и реагирования на ИБ-инциденты.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Практический анализ логов и мониторинг событий безопасности в рамках учебных SIEM-систем.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Отработка навыков первичного анализа аномалий, триажа алертов и классификации событий.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Разбор тактик и техник злоумышленников (Bruteforce, фишинговые атаки и вредоносные вложения) с использованием фреймворка MITRE ATT&CK.</li>
-                        </ul>
-                    </div>
+                <!-- ========== О СЕБЕ ========== -->
+                <section id="about" class="card sec-about">
+                    <h2><i class="fas fa-user-shield"></i> О себе</h2>
+                    <p class="lead">
+                        Младший инженер ИБ в <strong>Angara Security</strong>: мониторинг событий в SIEM, обработка инцидентов по плейбукам,
+                        управление защищённым доступом и 2FA/MFA, эксплуатация средств защиты.
+                    </p>
+                    <p>
+                        До этого — стажировка в SOC компании «Информзащита» и почти год администрирования Linux, Windows и Active Directory
+                        в лаборатории РТУ МИРЭА. Учусь на 4 курсе по специальности «Информационная безопасность автоматизированных систем».
+                        Хочу расти в мониторинге и реагировании на инциденты, защите веб-приложений (WAF) и эксплуатации СЗИ.
+                    </p>
+                </section>
 
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Avito CTF</h3>
-                            <span class="date">Соревнования</span>
-                        </div>
-                        <p class="subtitle">Участие в командных/личных соревнованиях по ИБ</p>
-                        <p>Решал соревновательные кейсы по поиску уязвимостей и защите инфраструктуры в следующих категориях:</p>
-                        <ul class="experience-bullets" style="margin-top: 10px; padding-left: 15px; font-size: 0.95rem; color: var(--text-secondary); list-style-type: '— '; max-width: 100%;">
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Стеганография и компьютерное зрение (Ghost Font):</strong> проанализировал зашумленное изображение, обошел алгоритмы ИИ-цензуры и восстановил скрытый графический флаг.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Анализ трафика:</strong> провел глубокий разбор сетевого дампа (.pcap) из открытой Wi-Fi сети и восстановил доступ к целевому аккаунту.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Безопасность веб-приложений:</strong> исследовал логику СДО, обнаружил скрытые элементы управления и обошел фронтенд-ограничения для получения ответов с бэкенда.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Реверс-инжиниринг и аудит кода:</strong> выполнил аудит исходного кода веб-приложения из zip-архива, изучил фильтры цензуры текста и восстановил скрытые полезные данные.</li>
-                        </ul>
-                    </div>
+                <!-- ========== ОПЫТ ========== -->
+                <section id="experience" class="card sec-exp">
+                    <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
 
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Платформы TryHackMe, Hack The Box, Let's Defend</h3>
-                            <span class="date">Практика</span>
-                        </div>
-                        <p class="subtitle">Самостоятельное обучение и симуляция работы SOC</p>
-                        <p>Регулярно отрабатывал навыки SOC-аналитика на специализированных платформах, решая практические кейсы по мониторингу и реагированию на инциденты:</p>
-                        <ul class="experience-bullets" style="margin-top: 10px; padding-left: 15px; font-size: 0.95rem; color: var(--text-secondary); list-style-type: '— '; max-width: 100%;">
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Мониторинг и SIEM:</strong> работал с системой Splunk, анализировал журналы событий различных операционных систем, выявлял подозрительные процессы, фишинговые атаки и индикаторы компрометации (IoC).</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Анализ инцидентов:</strong> занимался корреляцией событий, детальным исследованием цепочек атак (по матрице MITRE ATT&CK) и базовым анализом вредоносного ПО.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Обработка алертов:</strong> проводил приоритизацию событий безопасности с учётом критичности ИТ-активов, эффективно фильтровал ложные срабатывания (False Positives) и работал по готовым плейбукам реагирования.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Операционные процессы:</strong> отработал навыки категоризации и эскалации сложных инцидентов на смежные команды (L2/L3, системные администраторы).</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;"><strong>Регламенты ИБ:</strong> закрепил на практике понимание ключевых политик информационной безопасности, метрик SLA, регламентов реагирования и планов эскалации.</li>
+                    <article class="job is-current">
+                        <header class="job-head">
+                            <div>
+                                <h3>Angara Security</h3>
+                                <p class="job-role">Младший инженер информационной безопасности</p>
+                            </div>
+                            <div class="job-meta">
+                                <span class="pill pill-live"><span class="dot"></span>Сейчас</span>
+                                <span class="date">09.2026 — н. в.</span>
+                            </div>
+                        </header>
+                        <p>Группа непрерывного мониторинга: первичная обработка событий и инцидентов ИБ, сервисы доступа и СЗИ, «единое окно» для пользователей.</p>
+                        <ul class="chips">
+                            <li>SIEM</li><li>Плейбуки</li><li>2FA / MFA</li><li>Endpoint Security</li><li>Service Desk</li><li>SLA</li>
                         </ul>
-                    </div>
+                        <details open>
+                            <summary>Обязанности и задачи</summary>
+                            <ul class="bullets">
+                                <li><strong>Мониторинг и анализ событий ИБ:</strong> первичная обработка инцидентов и потока событий безопасности в корпоративных SIEM и системах мониторинга инфраструктуры по плейбукам.</li>
+                                <li><strong>Управление доступом:</strong> выдача и настройка защищённых удалённых доступов, работа с системами 2FA/MFA, генерация токенов и QR-кодов доступа.</li>
+                                <li><strong>Эксплуатация СЗИ:</strong> оператор продуктов ИБ, централизованное управление антивирусной защитой класса Endpoint Security.</li>
+                                <li><strong>«Единое окно» (Service Desk):</strong> регистрация, классификация, ведение и закрытие заявок и инцидентов по сервисам ИБ в рамках SLA.</li>
+                                <li><strong>Маршрутизация и эскалация:</strong> передача сложных инцидентов системным администраторам, сетевым инженерам и аналитикам L2/L3, контроль сроков обработки.</li>
+                                <li><strong>База знаний:</strong> наполнение и актуализация плейбуков и инструкций группы непрерывного мониторинга.</li>
+                            </ul>
+                            <p class="sub-title">Ключевые навыки на позиции</p>
+                            <ul class="bullets">
+                                <li>Приоритизация событий с учётом критичности ИТ-активов и жёстких рамок SLA.</li>
+                                <li>Анализ журналов событий Windows и Linux, фильтрация ложных срабатываний (False Positive).</li>
+                                <li>Работа по политикам ИБ, регламентам реагирования и матрицам эскалации инцидентов.</li>
+                            </ul>
+                        </details>
+                    </article>
 
-                    <div class="experience-details">
-                        <h3><i class="fas fa-code-branch"></i> Ключевой технический опыт</h3>
-                        <ul>
-                            <li><strong>Wazuh SIEM:</strong> Настройка и развертывание агентов, FIM, харденинг, подключение конечных точек к центральному серверу, мониторинг и корреляция событий безопасности.</li>
-                            <li>
-                                <strong>Wireshark:</strong> Глубокий анализ сетевого трафика, применение фильтров перехвата, обнаружение подозрительных пакетов и сетевых аномалий (включая симуляцию атак типа ICMP-flood).
-                                <!-- Аккуратная ссылка на кейс/отчет -->
-                                <div style="margin-top: 5px; font-size: 0.85rem;">
-                                    <i class="fas fa-external-link-alt" style="font-size: 0.75rem; color: var(--accent-blue); margin-right: 4px;"></i>
-                                    <a href="https://buildin.ai/013d1a8b-2b9a-485b-a7ac-e0f59a4ddc05" target="_blank" style="color: var(--accent-blue); text-decoration: none; border-bottom: 1px dashed var(--accent-blue); font-weight: 500;">
-                                        Посмотреть разбор симуляции атак
-                                    </a>
-                                </div>
-                            </li>
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>РТУ МИРЭА</h3>
+                                <p class="job-role">Инженер-лаборант</p>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">09.2025 — 06.2026</span>
+                            </div>
+                        </header>
+                        <p>Техническая поддержка учебной лаборатории кафедры и проведение лабораторных практикумов.</p>
+                        <ul class="chips">
+                            <li>Linux</li><li>Windows</li><li>Active Directory</li><li>Виртуализация</li><li>ЛВС</li>
                         </ul>
+                        <details>
+                            <summary>Обязанности и задачи</summary>
+                            <ul class="bullets">
+                                <li>Поддерживал работу ИТ-инфраструктуры лабораторного комплекса кафедры.</li>
+                                <li>Разворачивал, администрировал и поддерживал парк ПК под Linux и Windows.</li>
+                                <li>Участвовал в администрировании Active Directory: учётные записи, права доступа, групповые политики.</li>
+                                <li>Разворачивал и настраивал виртуальные машины для изолированных тестовых стендов.</li>
+                                <li>Поддерживал стабильность локальной сети, устранял сбои оборудования.</li>
+                                <li>Проводил лабораторные практикумы по сетям, системному администрированию и операционным системам.</li>
+                                <li>Консультировал студентов по отладке ПО, работе с гипервизорами и стендами.</li>
+                            </ul>
+                        </details>
+                    </article>
+
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>«Информзащита»</h3>
+                                <p class="job-role">Стажёр по информационной безопасности (SOC)</p>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">02.2025 — 06.2025</span>
+                            </div>
+                        </header>
+                        <p>Прошёл отбор и завершил программу «Основы проектной деятельности в информационной безопасности».</p>
+                        <ul class="chips">
+                            <li>SIEM</li><li>Триаж алертов</li><li>MITRE ATT&amp;CK</li><li>Анализ логов</li>
+                        </ul>
+                        <details>
+                            <summary>Чем занимался</summary>
+                            <ul class="bullets">
+                                <li>Практическая подготовка по мониторингу и реагированию на инциденты ИБ.</li>
+                                <li>Анализ логов и мониторинг событий безопасности в учебных SIEM-системах.</li>
+                                <li>Первичный анализ аномалий, триаж алертов и классификация событий.</li>
+                                <li>Разбор тактик и техник атакующих (брутфорс, фишинг, вредоносные вложения) по MITRE ATT&amp;CK.</li>
+                            </ul>
+                        </details>
+                    </article>
+                </section>
+
+                <!-- ========== ПРОЕКТЫ ========== -->
+                <section id="projects" class="card sec-projects">
+                    <h2><i class="fas fa-flask"></i> Проекты и стенды</h2>
+                    <div class="grid-2">
+                        <article class="tile">
+                            <h3><i class="fas fa-satellite-dish"></i> Wazuh SIEM — домашний стенд</h3>
+                            <p>Развернул сервер Wazuh, подключил конечные точки через агенты, настроил контроль целостности файлов (FIM) и проверки харденинга, разбирал корреляцию событий.</p>
+                            <ul class="chips chips-sm"><li>Wazuh</li><li>FIM</li><li>Харденинг</li></ul>
+                        </article>
+                        <article class="tile">
+                            <h3><i class="fas fa-wave-square"></i> Симуляция сетевых атак</h3>
+                            <p>Смоделировал атаки, включая ICMP-flood, и разобрал трафик в Wireshark: фильтры захвата и отображения, поиск аномальных пакетов.</p>
+                            <ul class="chips chips-sm"><li>Wireshark</li><li>ICMP-flood</li><li>PCAP</li></ul>
+                            <a class="link" href="https://buildin.ai/013d1a8b-2b9a-485b-a7ac-e0f59a4ddc05" target="_blank" rel="noopener">Читать разбор <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </article>
                     </div>
                 </section>
 
-                <section id="education" class="card animate-fade-in delay-2">
+                <!-- ========== ПРАКТИКА ========== -->
+                <section id="practice" class="card sec-practice">
+                    <h2><i class="fas fa-flag-checkered"></i> CTF и практика</h2>
+
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>Avito CTF</h3>
+                                <p class="job-role">Соревнования по информационной безопасности</p>
+                            </div>
+                        </header>
+                        <ul class="chips">
+                            <li>Стеганография</li><li>Анализ трафика</li><li>Web</li><li>Аудит кода</li>
+                        </ul>
+                        <details>
+                            <summary>Решённые задачи</summary>
+                            <ul class="bullets">
+                                <li><strong>Стеганография и компьютерное зрение (Ghost Font):</strong> проанализировал зашумлённое изображение, обошёл ИИ-цензуру и восстановил скрытый флаг.</li>
+                                <li><strong>Анализ трафика:</strong> разобрал дамп (.pcap) открытой Wi-Fi-сети и восстановил доступ к целевому аккаунту.</li>
+                                <li><strong>Веб-безопасность:</strong> исследовал логику СДО, нашёл скрытые элементы управления и обошёл фронтенд-ограничения, получив ответы с бэкенда.</li>
+                                <li><strong>Аудит кода:</strong> изучил исходники веб-приложения, фильтры цензуры текста и восстановил скрытые данные.</li>
+                            </ul>
+                        </details>
+                    </article>
+
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>TryHackMe · Hack The Box · LetsDefend</h3>
+                                <p class="job-role">Самостоятельная практика и симуляция работы SOC</p>
+                            </div>
+                        </header>
+                        <ul class="chips">
+                            <li>Splunk</li><li>IoC</li><li>False Positive</li><li>Эскалация</li>
+                        </ul>
+                        <details>
+                            <summary>Что отрабатывал</summary>
+                            <ul class="bullets">
+                                <li><strong>Мониторинг и SIEM:</strong> анализ журналов ОС в Splunk, поиск подозрительных процессов, фишинга и индикаторов компрометации.</li>
+                                <li><strong>Анализ инцидентов:</strong> корреляция событий, разбор цепочек атак по MITRE ATT&amp;CK, базовый анализ ВПО.</li>
+                                <li><strong>Обработка алертов:</strong> приоритизация по критичности активов, отсев ложных срабатываний, работа по плейбукам.</li>
+                                <li><strong>Процессы:</strong> категоризация и эскалация инцидентов на L2/L3, работа с метриками SLA и планами эскалации.</li>
+                            </ul>
+                        </details>
+                    </article>
+                </section>
+
+                <!-- ========== НАПРАВЛЕНИЯ ========== -->
+                <section id="focus" class="card sec-focus">
+                    <h2><i class="fas fa-bullseye"></i> Куда хочу расти</h2>
+                    <div class="grid-3">
+                        <div class="focus-item">
+                            <i class="fas fa-tower-broadcast"></i>
+                            <h3>Мониторинг и реагирование</h3>
+                            <p>Корреляция событий из SIEM, EDR и NTA, threat hunting, развитие плейбуков.</p>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-globe"></i>
+                            <h3>Защита веб-приложений</h3>
+                            <p>Анализ HTTP-трафика и атак из OWASP Top-10, работа с WAF и его правилами.</p>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-key"></i>
+                            <h3>СЗИ и доступ</h3>
+                            <p>Эксплуатация средств защиты конечных точек, MFA и управление доступом.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== ОБРАЗОВАНИЕ ========== -->
+                <section id="education" class="card sec-edu">
                     <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
-                    
-                 <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>РТУ МИРЭА, г. Москва</h3>
-                            <span class="date">2023 – 2028</span>
-                        </div>
-                        <p class="subtitle">Институт кибербезопасности и цифровых технологий</p>
-                        <p><strong>Специальность:</strong> 10.05.03 Информационная безопасность автоматизированных систем</p>
-                        <!-- Аккуратная ссылка на спецификацию программы -->
-                        <p style="margin-top: 10px; font-size: 0.95rem; color: var(--text-secondary);">
-                            <i class="fas fa-external-link-alt" style="font-size: 0.85rem; color: var(--accent-blue); margin-right: 5px;"></i>
-                            <a href="https://buildin.ai/share/efc703b8-227e-4740-b033-46365946afc7?code=FPGPZW" target="_blank" style="color: var(--accent-blue); text-decoration: none; border-bottom: 1px dashed var(--accent-blue); font-weight: 500; transition: color 0.2s;">
-                               Просмотреть спецификацию и модули программы
-                            </a>
-                        </p>
-                    </div>
 
-                    <div class="timeline-item">
-                        <div class="timeline-header">
-                            <h3>Цифровая кафедра РТУ МИРЭА</h3>
-                            <span class="date">2024 – 2025</span>
-                        </div>
-                        <p class="subtitle">Дополнительная программа переподготовки</p>
-                        <p><strong>Направление:</strong> Разработка и тестирование сервисов искусственного интеллекта. В рамках программы освоил базовую базу для работы со сложными ИТ-проектами:</p>
-                        <ul class="experience-bullets" style="margin-top: 10px; padding-left: 15px; font-size: 0.95rem; color: var(--text-secondary); list-style-type: '— '; max-width: 100%;">
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Изучал программирование на Python для автоматизации и обработки больших массивов данных.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Разбирался с основами работы нейросетей и алгоритмами машинного обучения (ML).</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Учился подготавливать и размечать «чистые» данные для корректного обучения моделей.</li>
-                            <li style="margin-bottom: 6px; padding-left: 5px;">Проходил модули по тестированию ИИ-сервисов, оценке их качества и поиску багов.</li>
-                        </ul>
-                    </div>
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>РТУ МИРЭА</h3>
+                                <p class="job-role">Институт кибербезопасности и цифровых технологий</p>
+                            </div>
+                            <div class="job-meta"><span class="date">2023 — 2028</span></div>
+                        </header>
+                        <p><strong>10.05.03</strong> Информационная безопасность автоматизированных систем (специалитет)</p>
+                        <a class="link" href="https://buildin.ai/share/efc703b8-227e-4740-b033-46365946afc7?code=FPGPZW" target="_blank" rel="noopener">Модули программы <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </article>
 
+                    <article class="job">
+                        <header class="job-head">
+                            <div>
+                                <h3>Цифровая кафедра РТУ МИРЭА</h3>
+                                <p class="job-role">Профессиональная переподготовка</p>
+                            </div>
+                            <div class="job-meta"><span class="date">2024 — 2025</span></div>
+                        </header>
+                        <p>Разработка и тестирование сервисов искусственного интеллекта.</p>
+                        <details>
+                            <summary>Что изучал</summary>
+                            <ul class="bullets">
+                                <li>Python для автоматизации и обработки больших массивов данных.</li>
+                                <li>Основы нейросетей и алгоритмов машинного обучения.</li>
+                                <li>Подготовка и разметка данных для обучения моделей.</li>
+                                <li>Тестирование ИИ-сервисов, оценка качества и поиск багов.</li>
+                            </ul>
+                        </details>
+                    </article>
+                </section>
+            </main>
+
+            <!-- ========== НАВЫКИ ========== -->
+            <aside class="col-side">
+                <section id="skills" class="card sec-skills">
+                    <h2><i class="fas fa-screwdriver-wrench"></i> Навыки</h2>
+
+                    <div class="skill-group g-mon">
+                        <h3>SIEM и мониторинг</h3>
+                        <ul class="tags"><li>Splunk</li><li>ELK</li><li>Wazuh</li><li>Zabbix</li><li>Плейбуки</li></ul>
+                    </div>
+                    <div class="skill-group g-sec">
+                        <h3>Средства защиты и доступ</h3>
+                        <ul class="tags"><li>Endpoint Security</li><li>EDR</li><li>DLP</li><li>IDS / IPS</li><li>Suricata</li><li>2FA / MFA</li><li>Active Directory</li></ul>
+                    </div>
+                    <div class="skill-group g-att">
+                        <h3>Атаки и фреймворки</h3>
+                        <ul class="tags"><li>MITRE ATT&amp;CK</li><li>OWASP Top-10</li><li>Metasploit</li><li>Криптография</li></ul>
+                    </div>
+                    <div class="skill-group g-net">
+                        <h3>Сети</h3>
+                        <ul class="tags"><li>TCP/IP · OSI</li><li>HTTP(S)</li><li>DNS</li><li>SSL / TLS</li><li>VPN</li><li>Firewall</li><li>Wireshark</li><li>Nmap</li></ul>
+                    </div>
+                    <div class="skill-group g-sys">
+                        <h3>Системы</h3>
+                        <ul class="tags"><li>Linux</li><li>Windows</li><li>PowerShell</li><li>Docker</li><li>Виртуализация</li><li>Python</li></ul>
+                    </div>
+                    <div class="skill-group g-law">
+                        <h3>Нормативная база и процессы</h3>
+                        <ul class="tags"><li>152-ФЗ</li><li>149-ФЗ</li><li>PCI DSS</li><li>SLA</li><li>Эскалация L2/L3</li></ul>
+                    </div>
                 </section>
 
-                <section id="interests" class="card animate-fade-in delay-1-5">
-                    <h2><i class="fas fa-bullseye"></i>Профессиональные интересы</h2>
-                    <p style="margin-bottom: 20px; color: var(--accent-blue); font-weight: 500;">
-                        Развитие в рамках Центра мониторинга и реагирования на киберугрозы (SOC)
-                    </p>
-                    <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-secondary);">
-                        В рамках данного направления готов решать следующие задачи:
-                    </p>
-                    <ul class="interests-list">
-                        <li><i class="fas fa-shield-alt"></i> Непрерывный аудит и мониторинг поступающих логов безопасности в режиме 24/7.</li>
-                        <li><i class="fas fa-filter"></i> Фильтрация ложных срабатываний (False Positives) и категоризация критичности инцидентов.</li>
-                        <li><i class="fas fa-crosshairs"></i> Ведение проактивного поиска следов компрометации в инфраструктуре (Threat Hunting).</li>
-                        <li><i class="fas fa-ban"></i> Оперативное пресечение активности злоумышленников на уровне конечных точек (хостов) и сети.</li>
-                        <li><i class="fas fa-chart-line"></i> Комплексный анализ и корреляция событий из различных систем защиты (SIEM, EDR, NTA, Proxy).</li>
-                        <li><i class="fas fa-file-medical-alt"></i> Создание и актуализация сценариев реагирования (Playbooks) на актуальные векторы атак.</li>
-                        <li><i class="fas fa-eye"></i> Выявление аномального поведения корпоративных учетных записей и внутренних сервисов.</li>
-                        <li><i class="fas fa-reply"></i> Первичный сбор данных и последующее реагирование на алерты от ИБ-систем.</li>
-                        <li><i class="fas fa-file-alt"></i> Формирование детальных отчетов по инцидентам и подготовка рекомендаций по закрытию «слепых зон» мониторинга.</li>
+                <section class="card sec-soft">
+                    <h2><i class="fas fa-user-gear"></i> Личные качества</h2>
+                    <ul class="soft-list">
+                        <li><i class="fas fa-magnifying-glass"></i> Аналитическое мышление и внимание к деталям</li>
+                        <li><i class="fas fa-bolt"></i> Стрессоустойчивость, готовность к сменному графику</li>
+                        <li><i class="fas fa-list-check"></i> Спокойно держу фокус на рутинном триаже</li>
+                        <li><i class="fas fa-rocket"></i> Быстро осваиваю новые инструменты</li>
+                    </ul>
+                    <h3 class="side-sub">Языки</h3>
+                    <ul class="lang-list">
+                        <li><span>Русский</span><span class="muted">родной</span></li>
+                        <li><span>English</span><span class="muted">B2</span></li>
                     </ul>
                 </section>
-            </div>
-
-                        <!-- Правая колонка: Навыки -->
-            <aside class="sidebar-column animate-fade-in delay-3">
-                <!-- Блок Hard Skills -->
-                <div class="card tags-card" style="margin-bottom: 20px;">
-                    <h2><i class="fas fa-tools"></i> Hard Skills</h2>
-                    <div class="tags-container">
-                        <span class="tag tech">Splunk</span>
-                        <span class="tag tech">ELK</span>
-                        <span class="tag tech">Wazuh</span>
-                        <span class="tag tech">WireShark</span>
-                        <span class="tag tech">Suricata</span>
-                        <span class="tag tech">Zabbix</span>
-                        <span class="tag tech">Nmap</span>
-                        <span class="tag tech">Docker</span>
-                        <span class="tag tech">*nix</span>
-                        <span class="tag tech">Windows</span>
-                        <span class="tag tech">PowerShell</span>                        
-                        <span class="tag tech">Metasploit</span>
-                        <span class="tag sec">OWASP TOP-10</span>
-                        <span class="tag sec">MITRE ATT&CK</span>
-                        <span class="tag sec">Cryptography</span>
-                        <span class="tag sec">IDS / IPS</span>
-                        <span class="tag sec">EDR</span>
-                        <span class="tag sec">DLP</span>
-                        <span class="tag net">OSI / TCP</span>
-                        <span class="tag net">HTTP / HTTPS</span>
-                        <span class="tag net">Firewall</span>
-                        <span class="tag net">DNS</span>
-                        <span class="tag net">DHCP</span>
-                        <span class="tag net">SSL / TLS</span>
-                        <span class="tag net">IP / MAC</span>
-                        <span class="tag net">NAT</span>
-                        <span class="tag net">VPN</span>
-                        <span class="tag law">152-ФЗ</span>
-                        <span class="tag law">149-ФЗ</span>
-                        <span class="tag law">PCI DSS</span>
-                        <span class="tag lang">ENGLISH B2</span>
-                    </div>
-                </div>
-
-                <div class="card tags-card">
-                    <h2><i class="fas fa-user-cog"></i> Soft Skills</h2>
-                    <div class="soft-tags-container">
-                        <span class="tag soft">Аналитический склад ума</span>
-                        <span class="tag soft">Усидчивость</span>
-                        <span class="tag soft">Стрессоустойчивость</span>
-                        <span class="tag soft">Внимание к деталям</span>
-                        <span class="tag soft">Готовность к монотонной работе</span>
-                        <span class="tag soft">Быстрая обучаемость</span>
-                    </div>
-                </div>
             </aside>
-        </main>
+        </div>
 
-        <footer class="animate-fade-in delay-4">
-            <p>&copy; 2026 Кирилл Степуленок. Powered by GitHub Pages.</p>
+        <footer class="footer">
+            <span>© 2026 Кирилл Степуленок</span>
+            <a href="#top">Наверх <i class="fas fa-arrow-up"></i></a>
         </footer>
     </div>
 
     <script>
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('data-target');
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+        // Печатающийся текст с перебором направлений
+        (function () {
+            const phrases = [
+                "мониторинг событий ИБ",
+                "реагирование на инциденты",
+                "защита веб-приложений (WAF)",
+                "управление доступом и СЗИ"
+            ];
+            const el = document.getElementById("typing-text");
+            const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (!el || reduce) return;
 
-    <script>
-        const text = "SOC-АНАЛИТИК";
-        const typingText = document.getElementById("typing-text");
-        let index = 0;
-
-        function type() {
-            if (index < text.length) {
-                typingText.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, Math.random() * 100 + 100);
+            let p = 0, i = phrases[0].length, deleting = true;
+            function tick() {
+                const word = phrases[p];
+                el.textContent = word.slice(0, i);
+                if (!deleting && i === word.length) { deleting = true; return setTimeout(tick, 2200); }
+                if (deleting && i === 0) { deleting = false; p = (p + 1) % phrases.length; return setTimeout(tick, 350); }
+                i += deleting ? -1 : 1;
+                setTimeout(tick, deleting ? 35 : 70 + Math.random() * 50);
             }
-        }
+            setTimeout(tick, 2200);
+        })();
 
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(type, 500);
-        });
+        // Подсветка активного пункта меню
+        (function () {
+            const links = [...document.querySelectorAll(".nav-menu a")];
+            const map = new Map(links.map(a => [a.getAttribute("href").slice(1), a]));
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        links.forEach(a => a.classList.remove("active"));
+                        map.get(e.target.id)?.classList.add("active");
+                    }
+                });
+            }, { rootMargin: "-40% 0px -55% 0px" });
+            map.forEach((_, id) => { const s = document.getElementById(id); if (s) obs.observe(s); });
+        })();
+
+        // При печати раскрываем все блоки «Подробнее»
+        (function () {
+            let closed = [];
+            window.addEventListener("beforeprint", () => {
+                closed = [...document.querySelectorAll("details:not([open])")];
+                closed.forEach(d => d.open = true);
+            });
+            window.addEventListener("afterprint", () => closed.forEach(d => d.open = false));
+        })();
     </script>
 </body>
 </html>
-
-
