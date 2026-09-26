@@ -26,6 +26,7 @@
     --c-net: #4cc2ff;
     --c-sys: #b98cff;
     --c-law: #9aa7b5;
+    --c-ti: #5eead4;
 
     --radius: 12px;
     --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -309,6 +310,7 @@ strong { color: var(--heading); font-weight: 600; }
     color: var(--heading);
 }
 .stat-label { font-size: 0.82rem; color: var(--text-muted); }
+.stat-value { line-height: 1.25; }
 
 /* ---------- О себе ---------- */
 
@@ -477,8 +479,26 @@ summary:hover { color: #8ad6ff; }
 .tile:hover,
 .focus-item:hover { border-color: var(--border-strong); transform: translateY(-2px); }
 
-.tile h3 { display: flex; gap: 10px; align-items: baseline; font-size: 1rem; color: var(--heading); }
-.tile h3 i { color: var(--accent); font-size: 0.9rem; }
+.tile h3 { display: flex; gap: 10px; align-items: flex-start; font-size: 1rem; line-height: 1.4; color: var(--heading); }
+.tile h3 i { color: var(--accent); font-size: 0.9rem; margin-top: 0.3em; flex-shrink: 0; }
+
+.section-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 14px 18px;
+    border: 1px dashed var(--border-strong);
+    border-radius: 10px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.93rem;
+    transition: border-color 0.2s, background 0.2s;
+}
+.section-link span { display: inline-flex; align-items: center; gap: 10px; }
+.section-link > i { font-size: 0.75rem; }
+.section-link:hover { text-decoration: none; border-color: var(--accent); background: var(--accent-soft); }
 .tile p { font-size: 0.92rem; color: var(--text-muted); flex-grow: 1; }
 .tile .link { margin-top: 2px; }
 .chips-sm { margin: 4px 0 0; }
@@ -534,6 +554,7 @@ summary:hover { color: #8ad6ff; }
 .g-net { --c: var(--c-net); }
 .g-sys { --c: var(--c-sys); }
 .g-law { --c: var(--c-law); }
+.g-ti  { --c: var(--c-ti); }
 
 .soft-list { display: flex; flex-direction: column; gap: 10px; }
 .soft-list li { display: flex; gap: 10px; font-size: 0.9rem; color: var(--text); }
@@ -633,9 +654,6 @@ summary:hover { color: #8ad6ff; }
     .footer { flex-direction: column; align-items: center; }
 }
 
-/* =========================================================
-   Печать / сохранение в PDF
-   ========================================================= */
 
 @media print {
     @page { size: A4; margin: 14mm 12mm; }
@@ -647,12 +665,13 @@ summary:hover { color: #8ad6ff; }
         --accent: #0a6fb3; --accent-soft: transparent;
         --green: #148a4b; --green-soft: transparent;
         --c-mon: #148a4b; --c-sec: #a15c00; --c-att: #b3261e;
-        --c-net: #0a6fb3; --c-sys: #6b3fb5; --c-law: #4a5561;
+        --c-net: #0a6fb3; --c-sys: #6b3fb5; --c-law: #4a5561; --c-ti: #0f766e;
     }
 
     * { animation: none !important; box-shadow: none !important; }
     body { background: #fff; font-size: 10.5pt; }
 
+    .section-link { border: none; padding: 0; }
     .top-nav, .hero-actions, .footer, .terminal, .sec-focus, .cursor { display: none !important; }
 
     .container { padding: 0; max-width: none; }
