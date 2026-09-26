@@ -26,7 +26,7 @@
     <!-- ========== НАВИГАЦИЯ ========== -->
     <nav class="top-nav" aria-label="Разделы резюме">
         <div class="nav-inner">
-            <a class="nav-logo" href="#top"><span class="prompt">~/</span>stepulenok</a>
+            <a class="nav-logo" href="#top" data-scroll><span class="prompt">~/</span>stepulenok</a>
             <ul class="nav-menu">
                 <li><a href="#experience">Опыт</a></li>
                 <li><a href="#skills">Навыки</a></li>
@@ -75,7 +75,7 @@
         <!-- ========== ЦИФРЫ ========== -->
         <section class="stats" aria-label="Коротко">
             <div class="stat"><span class="stat-value">с 2025</span><span class="stat-label">в информационной безопасности</span></div>
-            <div class="stat"><span class="stat-value">Angara</span><span class="stat-label">текущее место работы</span></div>
+            <div class="stat"><span class="stat-value">Angara Security</span><span class="stat-label">текущее место работы</span></div>
             <div class="stat"><span class="stat-value">4 курс</span><span class="stat-label">РТУ МИРЭА, ИБАС</span></div>
             <div class="stat"><span class="stat-value">B2</span><span class="stat-label">английский язык</span></div>
         </section>
@@ -87,13 +87,14 @@
                 <section id="about" class="card sec-about">
                     <h2><i class="fas fa-user-shield"></i> О себе</h2>
                     <p class="lead">
-                        Младший инженер ИБ в <strong>Angara Security</strong>: мониторинг событий в SIEM, обработка инцидентов по плейбукам,
+                        Младший инженер ИБ в <strong>Angara Security</strong>: мониторинг событий, обработка инцидентов по плейбукам,
                         управление защищённым доступом и 2FA/MFA, эксплуатация средств защиты.
                     </p>
                     <p>
                         До этого — стажировка в SOC компании «Информзащита» и почти год администрирования Linux, Windows и Active Directory
                         в лаборатории РТУ МИРЭА. Учусь на 4 курсе по специальности «Информационная безопасность автоматизированных систем».
-                        Хочу расти в мониторинге и реагировании на инциденты, защите веб-приложений (WAF) и эксплуатации СЗИ.
+                        Хочу расти в мониторинге и реагировании на инциденты, защите веб-приложений (WAF), а также как инженер ИБ —
+                        во внедрении, настройке и сопровождении различных средств защиты информации.
                     </p>
                 </section>
 
@@ -112,16 +113,18 @@
                                 <span class="date">09.2026 — н. в.</span>
                             </div>
                         </header>
-                        <p>Группа непрерывного мониторинга: первичная обработка событий и инцидентов ИБ, сервисы доступа и СЗИ, «единое окно» для пользователей.</p>
+                        <p><strong>ОАМР</strong> (отдел анализа, мониторинга и реагирования), группа непрерывного мониторинга: первичная обработка событий и инцидентов ИБ, сервисы доступа и СЗИ, «единое окно» для пользователей.</p>
                         <ul class="chips">
-                            <li>SIEM</li><li>Плейбуки</li><li>2FA / MFA</li><li>Endpoint Security</li><li>Service Desk</li><li>SLA</li>
+                            <li>SIEM</li><li>KATA</li><li>Kaspersky TIP</li><li>VirusTotal</li><li>Sucuri</li><li>Zabbix</li><li>Grafana</li><li>2FA / MFA</li><li>SLA</li>
                         </ul>
                         <details open>
                             <summary>Обязанности и задачи</summary>
                             <ul class="bullets">
                                 <li><strong>Мониторинг и анализ событий ИБ:</strong> первичная обработка инцидентов и потока событий безопасности в корпоративных SIEM и системах мониторинга инфраструктуры по плейбукам.</li>
                                 <li><strong>Управление доступом:</strong> выдача и настройка защищённых удалённых доступов, работа с системами 2FA/MFA, генерация токенов и QR-кодов доступа.</li>
-                                <li><strong>Эксплуатация СЗИ:</strong> оператор продуктов ИБ, централизованное управление антивирусной защитой класса Endpoint Security.</li>
+                                <li><strong>Эксплуатация СЗИ:</strong> оператор продуктов ИБ, централизованное управление антивирусной защитой класса Endpoint Security, работа с Kaspersky Anti Targeted Attack (KATA) и WAF Sucuri.</li>
+                                <li><strong>Threat Intelligence:</strong> проверка и обогащение индикаторов компрометации (хеши, IP, домены, URL) через VirusTotal и Kaspersky Threat Intelligence Portal.</li>
+                                <li><strong>Мониторинг инфраструктуры:</strong> отслеживание состояния систем и сервисов в Zabbix и дашбордах Grafana.</li>
                                 <li><strong>«Единое окно» (Service Desk):</strong> регистрация, классификация, ведение и закрытие заявок и инцидентов по сервисам ИБ в рамках SLA.</li>
                                 <li><strong>Маршрутизация и эскалация:</strong> передача сложных инцидентов системным администраторам, сетевым инженерам и аналитикам L2/L3, контроль сроков обработки.</li>
                                 <li><strong>База знаний:</strong> наполнение и актуализация плейбуков и инструкций группы непрерывного мониторинга.</li>
@@ -194,7 +197,7 @@
                     <h2><i class="fas fa-flask"></i> Проекты и стенды</h2>
                     <div class="grid-2">
                         <article class="tile">
-                            <h3><i class="fas fa-satellite-dish"></i> Wazuh SIEM — домашний стенд</h3>
+                            <h3><i class="fas fa-satellite-dish"></i> Стенд на Wazuh SIEM</h3>
                             <p>Развернул сервер Wazuh, подключил конечные точки через агенты, настроил контроль целостности файлов (FIM) и проверки харденинга, разбирал корреляцию событий.</p>
                             <ul class="chips chips-sm"><li>Wazuh</li><li>FIM</li><li>Харденинг</li></ul>
                         </article>
@@ -202,9 +205,12 @@
                             <h3><i class="fas fa-wave-square"></i> Симуляция сетевых атак</h3>
                             <p>Смоделировал атаки, включая ICMP-flood, и разобрал трафик в Wireshark: фильтры захвата и отображения, поиск аномальных пакетов.</p>
                             <ul class="chips chips-sm"><li>Wireshark</li><li>ICMP-flood</li><li>PCAP</li></ul>
-                            <a class="link" href="https://buildin.ai/013d1a8b-2b9a-485b-a7ac-e0f59a4ddc05" target="_blank" rel="noopener">Читать разбор <i class="fas fa-arrow-up-right-from-square"></i></a>
                         </article>
                     </div>
+                    <a class="section-link" href="https://buildin.ai/013d1a8b-2b9a-485b-a7ac-e0f59a4ddc05" target="_blank" rel="noopener">
+                        <span><i class="fas fa-book-open"></i> Разборы и статьи по стендам</span>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
                 </section>
 
                 <!-- ========== ПРАКТИКА ========== -->
@@ -269,9 +275,9 @@
                             <p>Анализ HTTP-трафика и атак из OWASP Top-10, работа с WAF и его правилами.</p>
                         </div>
                         <div class="focus-item">
-                            <i class="fas fa-key"></i>
-                            <h3>СЗИ и доступ</h3>
-                            <p>Эксплуатация средств защиты конечных точек, MFA и управление доступом.</p>
+                            <i class="fas fa-sliders"></i>
+                            <h3>Инженерия СЗИ</h3>
+                            <p>Внедрение, настройка и сопровождение средств защиты: защита конечных точек, WAF, MFA и управление доступом.</p>
                         </div>
                     </div>
                 </section>
@@ -321,11 +327,15 @@
 
                     <div class="skill-group g-mon">
                         <h3>SIEM и мониторинг</h3>
-                        <ul class="tags"><li>Splunk</li><li>ELK</li><li>Wazuh</li><li>Zabbix</li><li>Плейбуки</li></ul>
+                        <ul class="tags"><li>Splunk</li><li>ELK</li><li>Wazuh</li><li>Zabbix</li><li>Grafana</li><li>Плейбуки</li></ul>
                     </div>
                     <div class="skill-group g-sec">
                         <h3>Средства защиты и доступ</h3>
-                        <ul class="tags"><li>Endpoint Security</li><li>EDR</li><li>DLP</li><li>IDS / IPS</li><li>Suricata</li><li>2FA / MFA</li><li>Active Directory</li></ul>
+                        <ul class="tags"><li>Kaspersky Anti Targeted Attack</li><li>Endpoint Security</li><li>Sucuri WAF</li><li>EDR</li><li>DLP</li><li>IDS / IPS</li><li>Suricata</li><li>2FA / MFA</li><li>Active Directory</li></ul>
+                    </div>
+                    <div class="skill-group g-ti">
+                        <h3>Threat Intelligence</h3>
+                        <ul class="tags"><li>Kaspersky TIP</li><li>VirusTotal</li><li>IoC</li></ul>
                     </div>
                     <div class="skill-group g-att">
                         <h3>Атаки и фреймворки</h3>
@@ -364,7 +374,7 @@
 
         <footer class="footer">
             <span>© 2026 Кирилл Степуленок</span>
-            <a href="#top">Наверх <i class="fas fa-arrow-up"></i></a>
+            <a href="#top" data-scroll>Наверх <i class="fas fa-arrow-up"></i></a>
         </footer>
     </div>
 
@@ -375,7 +385,7 @@
                 "мониторинг событий ИБ",
                 "реагирование на инциденты",
                 "защита веб-приложений (WAF)",
-                "управление доступом и СЗИ"
+                "настройка и эксплуатация СЗИ"
             ];
             const el = document.getElementById("typing-text");
             const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -391,6 +401,27 @@
                 setTimeout(tick, deleting ? 35 : 70 + Math.random() * 50);
             }
             setTimeout(tick, 2200);
+        })();
+
+        // Плавная прокрутка к разделам без изменения адреса и истории браузера:
+        // кнопка «Назад» уводит со страницы, а не прыгает по разделам
+        (function () {
+            function go(id, smooth) {
+                const el = id === "top" ? document.body : document.getElementById(id);
+                if (el) el.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+            }
+            document.querySelectorAll('.nav-menu a, a[data-scroll]').forEach(a => {
+                a.addEventListener("click", e => {
+                    e.preventDefault();
+                    go(a.getAttribute("href").slice(1), true);
+                });
+            });
+            // Если открыли ссылку с #раздел — прокручиваем и убираем хвост из адреса
+            if (location.hash) {
+                const id = decodeURIComponent(location.hash.slice(1));
+                history.replaceState(null, "", location.pathname + location.search);
+                window.addEventListener("load", () => go(id, false));
+            }
         })();
 
         // Подсветка активного пункта меню
